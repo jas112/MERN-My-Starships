@@ -28,9 +28,12 @@ function Dashboard() {
             console.log(message);
         }
 
-        return () => {
-            dispatch(reset())
-        }
+        dispatch(getStarships());
+        dispatch(reset());
+
+        // return () => {
+        //     dispatch(reset())
+        // }
 
     }, [user, isError, message, navigate, dispatch])
 
